@@ -1,0 +1,477 @@
+{
+  "meta": {
+    "company": "Little Oven Supply",
+    "currency": "MYR",
+    "country": "Malaysia",
+    "chart_of_accounts": "Standard Chart of Accounts",
+    "fiscal_year": [
+      "2026-01-01",
+      "2026-12-31"
+    ],
+    "bank_name": "Maybank Current",
+    "first_document_number": "1001"
+  },
+  "settings": {
+    "Books Accounting Settings": {
+      "enable_inventory": 1,
+      "enable_invoice_returns": 1,
+      "enable_discounts_and_margin": 1,
+      "enable_price_list": 1,
+      "year_start_date": "2026-01-01",
+      "year_end_date": "2026-12-31"
+    },
+    "Books Inventory Settings": {
+      "enable_batches": 1,
+      "enable_serial_number": 1,
+      "enable_uom_conversions": 1,
+      "enable_point_of_sale": 1
+    },
+    "Books Defaults": {
+      "delivery_note_location": "Stores",
+      "purchase_receipt_location": "Stores",
+      "pos_customer": "Walk-in Customer",
+      "sales_invoice_terms": "Goods once sold are not returnable.",
+      "delivery_note_terms": "Received in good order."
+    }
+  },
+  "accounts": [
+    {
+      "name": "SST Payable",
+      "parent_account": "Duties and Taxes",
+      "root_type": "Liability",
+      "account_type": "Tax",
+      "is_group": 0
+    }
+  ],
+  "uoms": [
+    {
+      "uom_name": "Pack",
+      "must_be_whole_number": 1
+    },
+    {
+      "uom_name": "Box",
+      "must_be_whole_number": 1
+    }
+  ],
+  "items": [
+    {
+      "item_code": "LT-CUP50",
+      "item_name": "Paper Cup 8oz (Pack of 50)",
+      "item_type": "Product",
+      "is_stock_item": 1,
+      "stock_uom": "Pack",
+      "standard_rate": "24.00",
+      "has_batch_no": 1,
+      "batch_number_series": "CUP-.####",
+      "uoms": [
+        {
+          "uom": "Box",
+          "conversion_factor": 12
+        }
+      ],
+      "barcodes": [
+        {
+          "barcode": "9551234500017",
+          "barcode_type": "EAN"
+        }
+      ],
+      "item_defaults": [
+        {
+          "company": "Little Oven Supply",
+          "default_warehouse": "Stores",
+          "income_account": "Sales",
+          "expense_account": "Stock Received But Not Billed"
+        }
+      ]
+    },
+    {
+      "item_code": "LT-BEAN1KG",
+      "item_name": "Arabica Beans 1 kg",
+      "item_type": "Product",
+      "is_stock_item": 1,
+      "stock_uom": "Kg",
+      "standard_rate": "78.00",
+      "item_defaults": [
+        {
+          "company": "Little Oven Supply",
+          "default_warehouse": "Stores",
+          "income_account": "Sales",
+          "expense_account": "Stock Received But Not Billed"
+        }
+      ]
+    },
+    {
+      "item_code": "LT-GRINDX1",
+      "item_name": "Grinder X1",
+      "item_type": "Product",
+      "is_stock_item": 1,
+      "stock_uom": "Unit",
+      "standard_rate": "640.00",
+      "has_serial_no": 1,
+      "serial_no_series": "GRND-.####",
+      "item_defaults": [
+        {
+          "company": "Little Oven Supply",
+          "default_warehouse": "Stores",
+          "income_account": "Sales",
+          "expense_account": "Stock Received But Not Billed"
+        }
+      ]
+    },
+    {
+      "item_code": "LT-SVC-INST",
+      "item_name": "Installation & Setup",
+      "item_type": "Service",
+      "is_stock_item": 0,
+      "stock_uom": "Hour",
+      "standard_rate": "120.00",
+      "item_defaults": [
+        {
+          "company": "Little Oven Supply",
+          "income_account": "Service",
+          "expense_account": "Cost of Goods Sold"
+        }
+      ]
+    }
+  ],
+  "parties": [
+    {
+      "doctype": "Books Customer",
+      "name": "Kopi Hub",
+      "accounts": [
+        {
+          "company": "Little Oven Supply",
+          "account": "Debtors"
+        }
+      ]
+    },
+    {
+      "doctype": "Books Customer",
+      "name": "Sunrise Cafe",
+      "accounts": [
+        {
+          "company": "Little Oven Supply",
+          "account": "Debtors"
+        }
+      ]
+    },
+    {
+      "doctype": "Books Customer",
+      "name": "Walk-in Customer",
+      "accounts": [
+        {
+          "company": "Little Oven Supply",
+          "account": "Debtors"
+        }
+      ]
+    },
+    {
+      "doctype": "Books Supplier",
+      "name": "Nusantara Supplies",
+      "accounts": [
+        {
+          "company": "Little Oven Supply",
+          "account": "Creditors"
+        }
+      ]
+    }
+  ],
+  "tax_template": {
+    "doctype": "Books Sales Taxes and Charges Template",
+    "title": "SST 8%",
+    "company": "Little Oven Supply",
+    "is_default": 1,
+    "taxes": [
+      {
+        "charge_type": "On Net Total",
+        "account_head": "SST Payable",
+        "rate": 8,
+        "description": "Sales and Service Tax 8%"
+      }
+    ]
+  },
+  "price_list": {
+    "doctype": "Books Price List",
+    "price_list_name": "Wholesale",
+    "currency": "MYR",
+    "selling": 1,
+    "enabled": 1,
+    "item_prices": [
+      {
+        "item_code": "LT-CUP50",
+        "uom": "Pack",
+        "price_list_rate": "22.00"
+      },
+      {
+        "item_code": "LT-BEAN1KG",
+        "uom": "Kg",
+        "price_list_rate": "72.00"
+      }
+    ]
+  },
+  "documents": [
+    {
+      "name": "JV-1001",
+      "doctype": "Books Journal Entry",
+      "posting_date": "2026-09-01",
+      "voucher_type": "Journal Entry",
+      "total_debit": "20000.00",
+      "status_after_submit": "Submitted"
+    },
+    {
+      "name": "PREC-1001",
+      "doctype": "Books Purchase Receipt",
+      "posting_date": "2026-09-02",
+      "supplier": "Nusantara Supplies",
+      "grand_total": "5520.00",
+      "status_after_submit": "Completed"
+    },
+    {
+      "name": "PINV-1001",
+      "doctype": "Books Purchase Invoice",
+      "posting_date": "2026-09-03",
+      "supplier": "Nusantara Supplies",
+      "grand_total": "5520.00",
+      "status_after_submit": "Paid"
+    },
+    {
+      "name": "PAY-1001",
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-09-10",
+      "payment_type": "Pay",
+      "party": "Nusantara Supplies",
+      "paid_amount": "5520.00",
+      "status_after_submit": "Submitted"
+    },
+    {
+      "name": "SINV-1001",
+      "doctype": "Books Sales Invoice",
+      "posting_date": "2026-09-15",
+      "party": "Kopi Hub",
+      "party_type": "Customer",
+      "price_list": null,
+      "items": [
+        {
+          "item_code": "LT-CUP50",
+          "qty": 20,
+          "rate": "24.00",
+          "amount": "480.00",
+          "cost": "300.00",
+          "fifo_layers": "2E+1@15.00"
+        },
+        {
+          "item_code": "LT-BEAN1KG",
+          "qty": 10,
+          "rate": "78.00",
+          "amount": "780.00",
+          "cost": "480.00",
+          "fifo_layers": "1E+1@48.00"
+        },
+        {
+          "item_code": "LT-GRINDX1",
+          "qty": 1,
+          "rate": "640.00",
+          "amount": "640.00",
+          "cost": "420.00",
+          "fifo_layers": "1@420.00"
+        }
+      ],
+      "net_total": "1900.00",
+      "total_taxes_and_charges": "152.00",
+      "grand_total": "2052.00",
+      "status_after_submit": "Unpaid",
+      "delivery_note": "SHPM-1001",
+      "cogs": "1200.00",
+      "payment": ""
+    },
+    {
+      "name": "SHPM-1001",
+      "doctype": "Books Delivery Note",
+      "posting_date": "2026-09-15",
+      "against_sales_invoice": "SINV-1001",
+      "value": "1200.00",
+      "status": "Completed"
+    },
+    {
+      "name": "PAY-1003",
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-09-25",
+      "payment_type": "Receive",
+      "party": "Kopi Hub",
+      "paid_amount": "2052.00",
+      "allocated_to": "SINV-1001",
+      "status_after_submit": "Submitted"
+    },
+    {
+      "name": "PREC-1002",
+      "doctype": "Books Purchase Receipt",
+      "posting_date": "2026-10-12",
+      "supplier": "Nusantara Supplies",
+      "grand_total": "2080.00",
+      "status_after_submit": "Completed"
+    },
+    {
+      "name": "PINV-1002",
+      "doctype": "Books Purchase Invoice",
+      "posting_date": "2026-10-13",
+      "supplier": "Nusantara Supplies",
+      "grand_total": "2080.00",
+      "status_after_submit": "Paid"
+    },
+    {
+      "name": "PAY-1002",
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-10-14",
+      "payment_type": "Pay",
+      "party": "Nusantara Supplies",
+      "paid_amount": "2080.00",
+      "status_after_submit": "Submitted"
+    },
+    {
+      "name": "SINV-1002",
+      "doctype": "Books Sales Invoice",
+      "posting_date": "2026-10-20",
+      "party": "Sunrise Cafe",
+      "party_type": "Customer",
+      "price_list": "Wholesale",
+      "items": [
+        {
+          "item_code": "LT-CUP50",
+          "qty": 24,
+          "rate": "22.00",
+          "amount": "528.00",
+          "cost": "360.00",
+          "fifo_layers": "24@15.00"
+        },
+        {
+          "item_code": "LT-BEAN1KG",
+          "qty": 32,
+          "rate": "72.00",
+          "amount": "2304.00",
+          "cost": "1544.00",
+          "fifo_layers": "3E+1@48.00 + 2@52.00"
+        }
+      ],
+      "net_total": "2832.00",
+      "total_taxes_and_charges": "226.56",
+      "grand_total": "3058.56",
+      "status_after_submit": "Unpaid",
+      "delivery_note": "SHPM-1002",
+      "cogs": "1904.00",
+      "payment": ""
+    },
+    {
+      "name": "SHPM-1002",
+      "doctype": "Books Delivery Note",
+      "posting_date": "2026-10-20",
+      "against_sales_invoice": "SINV-1002",
+      "value": "1904.00",
+      "status": "Completed"
+    },
+    {
+      "name": "PAY-1004",
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-10-22",
+      "payment_type": "Receive",
+      "party": "Sunrise Cafe",
+      "paid_amount": "3058.56",
+      "allocated_to": "SINV-1002",
+      "status_after_submit": "Submitted"
+    },
+    {
+      "name": "SINV-1003",
+      "doctype": "Books Sales Invoice",
+      "posting_date": "2026-10-25",
+      "party": "Kopi Hub",
+      "is_return": true,
+      "return_against": "SINV-1001",
+      "items": [
+        {
+          "item_code": "LT-GRINDX1",
+          "qty": -1,
+          "rate": "640.00",
+          "amount": "-640.00",
+          "cost": "-420.00"
+        }
+      ],
+      "net_total": "-640.00",
+      "total_taxes_and_charges": "-51.20",
+      "grand_total": "-691.20",
+      "status_after_submit": "Return",
+      "delivery_note": "SHPM-1003",
+      "cogs": "-420.00"
+    },
+    {
+      "name": "SHPM-1003",
+      "doctype": "Books Delivery Note",
+      "posting_date": "2026-10-25",
+      "return_against": "SHPM-1001",
+      "value": "-420.00",
+      "status": "Return"
+    },
+    {
+      "name": "PAY-1005",
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-10-28",
+      "payment_type": "Pay",
+      "party": "Kopi Hub",
+      "paid_amount": "691.20",
+      "allocated_to": "SINV-1003",
+      "status_after_submit": "Submitted"
+    },
+    {
+      "name": "SMOV-1001",
+      "doctype": "Books Stock Entry",
+      "posting_date": "2026-10-30",
+      "purpose": "Material Issue",
+      "value": "30.00",
+      "fifo_layers": "2@15.00",
+      "status_after_submit": "Submitted"
+    },
+    {
+      "name": "SINV-1004",
+      "doctype": "Books Sales Invoice",
+      "posting_date": "2026-10-05",
+      "party": "Walk-in Customer",
+      "party_type": "Customer",
+      "price_list": null,
+      "items": [
+        {
+          "item_code": "LT-CUP50",
+          "qty": 3,
+          "rate": "24.00",
+          "amount": "72.00",
+          "cost": "45.00",
+          "fifo_layers": "3@15.00"
+        }
+      ],
+      "net_total": "72.00",
+      "total_taxes_and_charges": "5.76",
+      "grand_total": "77.76",
+      "status_after_submit": "Paid",
+      "delivery_note": "SHPM-1004",
+      "cogs": "45.00",
+      "payment": "PAY-1006",
+      "is_pos": true
+    },
+    {
+      "name": "SHPM-1004",
+      "doctype": "Books Delivery Note",
+      "posting_date": "2026-10-05",
+      "against_sales_invoice": "SINV-1004",
+      "value": "45.00",
+      "status": "Completed"
+    },
+    {
+      "name": "PAY-1006",
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-10-05",
+      "payment_type": "Receive",
+      "party": "Walk-in Customer",
+      "mode_of_payment": "Cash",
+      "paid_amount": "77.76",
+      "allocated_to": "SINV-1004",
+      "status_after_submit": "Submitted"
+    }
+  ]
+}

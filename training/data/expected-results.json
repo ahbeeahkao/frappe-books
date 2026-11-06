@@ -1,0 +1,957 @@
+{
+  "meta": {
+    "generated_by": "training/data/build_expected.py",
+    "app_version": "16.1.0",
+    "note": "Reference model of the posting rules; not captured from a running site.",
+    "company": "Little Oven Supply",
+    "currency": "MYR",
+    "period": {
+      "from": "2026-01-01",
+      "to": "2026-10-31"
+    }
+  },
+  "documents": {
+    "JV-1001": {
+      "doctype": "Books Journal Entry",
+      "posting_date": "2026-09-01",
+      "voucher_type": "Journal Entry",
+      "total_debit": "20000.00",
+      "status_after_submit": "Submitted",
+      "ledger": [
+        {
+          "date": "2026-09-01",
+          "voucher": "JV-1001",
+          "account": "Maybank Current",
+          "debit": "20000.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-09-01",
+          "voucher": "JV-1001",
+          "account": "Capital Stock",
+          "debit": "0.00",
+          "credit": "20000.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "PREC-1001": {
+      "doctype": "Books Purchase Receipt",
+      "posting_date": "2026-09-02",
+      "supplier": "Nusantara Supplies",
+      "grand_total": "5520.00",
+      "status_after_submit": "Completed",
+      "ledger": [
+        {
+          "date": "2026-09-02",
+          "voucher": "PREC-1001",
+          "account": "Stock In Hand",
+          "debit": "1500.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-09-02",
+          "voucher": "PREC-1001",
+          "account": "Stock In Hand",
+          "debit": "1920.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-09-02",
+          "voucher": "PREC-1001",
+          "account": "Stock In Hand",
+          "debit": "2100.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-09-02",
+          "voucher": "PREC-1001",
+          "account": "Stock Received But Not Billed",
+          "debit": "0.00",
+          "credit": "5520.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "PINV-1001": {
+      "doctype": "Books Purchase Invoice",
+      "posting_date": "2026-09-03",
+      "supplier": "Nusantara Supplies",
+      "grand_total": "5520.00",
+      "status_after_submit": "Paid",
+      "ledger": [
+        {
+          "date": "2026-09-03",
+          "voucher": "PINV-1001",
+          "account": "Stock Received But Not Billed",
+          "debit": "5520.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-09-03",
+          "voucher": "PINV-1001",
+          "account": "Creditors",
+          "debit": "0.00",
+          "credit": "5520.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "PAY-1001": {
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-09-10",
+      "payment_type": "Pay",
+      "party": "Nusantara Supplies",
+      "paid_amount": "5520.00",
+      "status_after_submit": "Submitted",
+      "ledger": [
+        {
+          "date": "2026-09-10",
+          "voucher": "PAY-1001",
+          "account": "Creditors",
+          "debit": "5520.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-09-10",
+          "voucher": "PAY-1001",
+          "account": "Maybank Current",
+          "debit": "0.00",
+          "credit": "5520.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "SINV-1001": {
+      "doctype": "Books Sales Invoice",
+      "posting_date": "2026-09-15",
+      "party": "Kopi Hub",
+      "party_type": "Customer",
+      "price_list": null,
+      "items": [
+        {
+          "item_code": "LT-CUP50",
+          "qty": 20,
+          "rate": "24.00",
+          "amount": "480.00",
+          "cost": "300.00",
+          "fifo_layers": "2E+1@15.00"
+        },
+        {
+          "item_code": "LT-BEAN1KG",
+          "qty": 10,
+          "rate": "78.00",
+          "amount": "780.00",
+          "cost": "480.00",
+          "fifo_layers": "1E+1@48.00"
+        },
+        {
+          "item_code": "LT-GRINDX1",
+          "qty": 1,
+          "rate": "640.00",
+          "amount": "640.00",
+          "cost": "420.00",
+          "fifo_layers": "1@420.00"
+        }
+      ],
+      "net_total": "1900.00",
+      "total_taxes_and_charges": "152.00",
+      "grand_total": "2052.00",
+      "status_after_submit": "Unpaid",
+      "delivery_note": "SHPM-1001",
+      "cogs": "1200.00",
+      "payment": "",
+      "ledger": [
+        {
+          "date": "2026-09-15",
+          "voucher": "SINV-1001",
+          "account": "Debtors",
+          "debit": "2052.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-09-15",
+          "voucher": "SINV-1001",
+          "account": "Sales",
+          "debit": "0.00",
+          "credit": "1900.00"
+        },
+        {
+          "date": "2026-09-15",
+          "voucher": "SINV-1001",
+          "account": "SST Payable",
+          "debit": "0.00",
+          "credit": "152.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "SHPM-1001": {
+      "doctype": "Books Delivery Note",
+      "posting_date": "2026-09-15",
+      "against_sales_invoice": "SINV-1001",
+      "value": "1200.00",
+      "status": "Completed",
+      "ledger": [
+        {
+          "date": "2026-09-15",
+          "voucher": "SHPM-1001",
+          "account": "Stock In Hand",
+          "debit": "0.00",
+          "credit": "300.00"
+        },
+        {
+          "date": "2026-09-15",
+          "voucher": "SHPM-1001",
+          "account": "Stock In Hand",
+          "debit": "0.00",
+          "credit": "480.00"
+        },
+        {
+          "date": "2026-09-15",
+          "voucher": "SHPM-1001",
+          "account": "Stock In Hand",
+          "debit": "0.00",
+          "credit": "420.00"
+        },
+        {
+          "date": "2026-09-15",
+          "voucher": "SHPM-1001",
+          "account": "Cost of Goods Sold",
+          "debit": "1200.00",
+          "credit": "0.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "PAY-1003": {
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-09-25",
+      "payment_type": "Receive",
+      "party": "Kopi Hub",
+      "paid_amount": "2052.00",
+      "allocated_to": "SINV-1001",
+      "status_after_submit": "Submitted",
+      "ledger": [
+        {
+          "date": "2026-09-25",
+          "voucher": "PAY-1003",
+          "account": "Maybank Current",
+          "debit": "2052.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-09-25",
+          "voucher": "PAY-1003",
+          "account": "Debtors",
+          "debit": "0.00",
+          "credit": "2052.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "PREC-1002": {
+      "doctype": "Books Purchase Receipt",
+      "posting_date": "2026-10-12",
+      "supplier": "Nusantara Supplies",
+      "grand_total": "2080.00",
+      "status_after_submit": "Completed",
+      "ledger": [
+        {
+          "date": "2026-10-12",
+          "voucher": "PREC-1002",
+          "account": "Stock In Hand",
+          "debit": "2080.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-12",
+          "voucher": "PREC-1002",
+          "account": "Stock Received But Not Billed",
+          "debit": "0.00",
+          "credit": "2080.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "PINV-1002": {
+      "doctype": "Books Purchase Invoice",
+      "posting_date": "2026-10-13",
+      "supplier": "Nusantara Supplies",
+      "grand_total": "2080.00",
+      "status_after_submit": "Paid",
+      "ledger": [
+        {
+          "date": "2026-10-13",
+          "voucher": "PINV-1002",
+          "account": "Stock Received But Not Billed",
+          "debit": "2080.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-13",
+          "voucher": "PINV-1002",
+          "account": "Creditors",
+          "debit": "0.00",
+          "credit": "2080.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "PAY-1002": {
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-10-14",
+      "payment_type": "Pay",
+      "party": "Nusantara Supplies",
+      "paid_amount": "2080.00",
+      "status_after_submit": "Submitted",
+      "ledger": [
+        {
+          "date": "2026-10-14",
+          "voucher": "PAY-1002",
+          "account": "Creditors",
+          "debit": "2080.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-14",
+          "voucher": "PAY-1002",
+          "account": "Maybank Current",
+          "debit": "0.00",
+          "credit": "2080.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "SINV-1002": {
+      "doctype": "Books Sales Invoice",
+      "posting_date": "2026-10-20",
+      "party": "Sunrise Cafe",
+      "party_type": "Customer",
+      "price_list": "Wholesale",
+      "items": [
+        {
+          "item_code": "LT-CUP50",
+          "qty": 24,
+          "rate": "22.00",
+          "amount": "528.00",
+          "cost": "360.00",
+          "fifo_layers": "24@15.00"
+        },
+        {
+          "item_code": "LT-BEAN1KG",
+          "qty": 32,
+          "rate": "72.00",
+          "amount": "2304.00",
+          "cost": "1544.00",
+          "fifo_layers": "3E+1@48.00 + 2@52.00"
+        }
+      ],
+      "net_total": "2832.00",
+      "total_taxes_and_charges": "226.56",
+      "grand_total": "3058.56",
+      "status_after_submit": "Unpaid",
+      "delivery_note": "SHPM-1002",
+      "cogs": "1904.00",
+      "payment": "",
+      "ledger": [
+        {
+          "date": "2026-10-20",
+          "voucher": "SINV-1002",
+          "account": "Debtors",
+          "debit": "3058.56",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-20",
+          "voucher": "SINV-1002",
+          "account": "Sales",
+          "debit": "0.00",
+          "credit": "2832.00"
+        },
+        {
+          "date": "2026-10-20",
+          "voucher": "SINV-1002",
+          "account": "SST Payable",
+          "debit": "0.00",
+          "credit": "226.56"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "SHPM-1002": {
+      "doctype": "Books Delivery Note",
+      "posting_date": "2026-10-20",
+      "against_sales_invoice": "SINV-1002",
+      "value": "1904.00",
+      "status": "Completed",
+      "ledger": [
+        {
+          "date": "2026-10-20",
+          "voucher": "SHPM-1002",
+          "account": "Stock In Hand",
+          "debit": "0.00",
+          "credit": "360.00"
+        },
+        {
+          "date": "2026-10-20",
+          "voucher": "SHPM-1002",
+          "account": "Stock In Hand",
+          "debit": "0.00",
+          "credit": "1544.00"
+        },
+        {
+          "date": "2026-10-20",
+          "voucher": "SHPM-1002",
+          "account": "Cost of Goods Sold",
+          "debit": "1904.00",
+          "credit": "0.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "PAY-1004": {
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-10-22",
+      "payment_type": "Receive",
+      "party": "Sunrise Cafe",
+      "paid_amount": "3058.56",
+      "allocated_to": "SINV-1002",
+      "status_after_submit": "Submitted",
+      "ledger": [
+        {
+          "date": "2026-10-22",
+          "voucher": "PAY-1004",
+          "account": "Maybank Current",
+          "debit": "3058.56",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-22",
+          "voucher": "PAY-1004",
+          "account": "Debtors",
+          "debit": "0.00",
+          "credit": "3058.56"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "SINV-1003": {
+      "doctype": "Books Sales Invoice",
+      "posting_date": "2026-10-25",
+      "party": "Kopi Hub",
+      "is_return": true,
+      "return_against": "SINV-1001",
+      "items": [
+        {
+          "item_code": "LT-GRINDX1",
+          "qty": -1,
+          "rate": "640.00",
+          "amount": "-640.00",
+          "cost": "-420.00"
+        }
+      ],
+      "net_total": "-640.00",
+      "total_taxes_and_charges": "-51.20",
+      "grand_total": "-691.20",
+      "status_after_submit": "Return",
+      "delivery_note": "SHPM-1003",
+      "cogs": "-420.00",
+      "ledger": [
+        {
+          "date": "2026-10-25",
+          "voucher": "SINV-1003",
+          "account": "Sales",
+          "debit": "640.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-25",
+          "voucher": "SINV-1003",
+          "account": "SST Payable",
+          "debit": "51.20",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-25",
+          "voucher": "SINV-1003",
+          "account": "Debtors",
+          "debit": "0.00",
+          "credit": "691.20"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "SHPM-1003": {
+      "doctype": "Books Delivery Note",
+      "posting_date": "2026-10-25",
+      "return_against": "SHPM-1001",
+      "value": "-420.00",
+      "status": "Return",
+      "ledger": [
+        {
+          "date": "2026-10-25",
+          "voucher": "SHPM-1003",
+          "account": "Stock In Hand",
+          "debit": "420.00",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-25",
+          "voucher": "SHPM-1003",
+          "account": "Cost of Goods Sold",
+          "debit": "0.00",
+          "credit": "420.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "PAY-1005": {
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-10-28",
+      "payment_type": "Pay",
+      "party": "Kopi Hub",
+      "paid_amount": "691.20",
+      "allocated_to": "SINV-1003",
+      "status_after_submit": "Submitted",
+      "ledger": [
+        {
+          "date": "2026-10-28",
+          "voucher": "PAY-1005",
+          "account": "Debtors",
+          "debit": "691.20",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-28",
+          "voucher": "PAY-1005",
+          "account": "Maybank Current",
+          "debit": "0.00",
+          "credit": "691.20"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "SMOV-1001": {
+      "doctype": "Books Stock Entry",
+      "posting_date": "2026-10-30",
+      "purpose": "Material Issue",
+      "value": "30.00",
+      "fifo_layers": "2@15.00",
+      "status_after_submit": "Submitted",
+      "ledger": [
+        {
+          "date": "2026-10-30",
+          "voucher": "SMOV-1001",
+          "account": "Stock In Hand",
+          "debit": "0.00",
+          "credit": "30.00"
+        },
+        {
+          "date": "2026-10-30",
+          "voucher": "SMOV-1001",
+          "account": "Stock Adjustment",
+          "debit": "30.00",
+          "credit": "0.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "SINV-1004": {
+      "doctype": "Books Sales Invoice",
+      "posting_date": "2026-10-05",
+      "party": "Walk-in Customer",
+      "party_type": "Customer",
+      "price_list": null,
+      "items": [
+        {
+          "item_code": "LT-CUP50",
+          "qty": 3,
+          "rate": "24.00",
+          "amount": "72.00",
+          "cost": "45.00",
+          "fifo_layers": "3@15.00"
+        }
+      ],
+      "net_total": "72.00",
+      "total_taxes_and_charges": "5.76",
+      "grand_total": "77.76",
+      "status_after_submit": "Paid",
+      "delivery_note": "SHPM-1004",
+      "cogs": "45.00",
+      "payment": "PAY-1006",
+      "is_pos": true,
+      "ledger": [
+        {
+          "date": "2026-10-05",
+          "voucher": "SINV-1004",
+          "account": "Debtors",
+          "debit": "77.76",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-05",
+          "voucher": "SINV-1004",
+          "account": "Sales",
+          "debit": "0.00",
+          "credit": "72.00"
+        },
+        {
+          "date": "2026-10-05",
+          "voucher": "SINV-1004",
+          "account": "SST Payable",
+          "debit": "0.00",
+          "credit": "5.76"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "SHPM-1004": {
+      "doctype": "Books Delivery Note",
+      "posting_date": "2026-10-05",
+      "against_sales_invoice": "SINV-1004",
+      "value": "45.00",
+      "status": "Completed",
+      "ledger": [
+        {
+          "date": "2026-10-05",
+          "voucher": "SHPM-1004",
+          "account": "Stock In Hand",
+          "debit": "0.00",
+          "credit": "45.00"
+        },
+        {
+          "date": "2026-10-05",
+          "voucher": "SHPM-1004",
+          "account": "Cost of Goods Sold",
+          "debit": "45.00",
+          "credit": "0.00"
+        }
+      ],
+      "ledger_balanced": true
+    },
+    "PAY-1006": {
+      "doctype": "Books Payment Entry",
+      "posting_date": "2026-10-05",
+      "payment_type": "Receive",
+      "party": "Walk-in Customer",
+      "mode_of_payment": "Cash",
+      "paid_amount": "77.76",
+      "allocated_to": "SINV-1004",
+      "status_after_submit": "Submitted",
+      "ledger": [
+        {
+          "date": "2026-10-05",
+          "voucher": "PAY-1006",
+          "account": "Cash",
+          "debit": "77.76",
+          "credit": "0.00"
+        },
+        {
+          "date": "2026-10-05",
+          "voucher": "PAY-1006",
+          "account": "Debtors",
+          "debit": "0.00",
+          "credit": "77.76"
+        }
+      ],
+      "ledger_balanced": true
+    }
+  },
+  "stock_ledger": [
+    {
+      "date": "2026-09-02",
+      "voucher": "PREC-1001",
+      "item": "LT-CUP50",
+      "qty": "100.00",
+      "rate": "15.00",
+      "value": "1500.00",
+      "balance_qty": "100.00",
+      "balance_value": "1500.00"
+    },
+    {
+      "date": "2026-09-02",
+      "voucher": "PREC-1001",
+      "item": "LT-BEAN1KG",
+      "qty": "40.00",
+      "rate": "48.00",
+      "value": "1920.00",
+      "balance_qty": "40.00",
+      "balance_value": "1920.00"
+    },
+    {
+      "date": "2026-09-02",
+      "voucher": "PREC-1001",
+      "item": "LT-GRINDX1",
+      "qty": "5.00",
+      "rate": "420.00",
+      "value": "2100.00",
+      "balance_qty": "5.00",
+      "balance_value": "2100.00"
+    },
+    {
+      "date": "2026-09-15",
+      "voucher": "SHPM-1001",
+      "item": "LT-CUP50",
+      "qty": "-20.00",
+      "rate": "15.00",
+      "value": "-300.00",
+      "balance_qty": "80.00",
+      "balance_value": "1200.00"
+    },
+    {
+      "date": "2026-09-15",
+      "voucher": "SHPM-1001",
+      "item": "LT-BEAN1KG",
+      "qty": "-10.00",
+      "rate": "48.00",
+      "value": "-480.00",
+      "balance_qty": "30.00",
+      "balance_value": "1440.00"
+    },
+    {
+      "date": "2026-09-15",
+      "voucher": "SHPM-1001",
+      "item": "LT-GRINDX1",
+      "qty": "-1.00",
+      "rate": "420.00",
+      "value": "-420.00",
+      "balance_qty": "4.00",
+      "balance_value": "1680.00"
+    },
+    {
+      "date": "2026-10-12",
+      "voucher": "PREC-1002",
+      "item": "LT-BEAN1KG",
+      "qty": "40.00",
+      "rate": "52.00",
+      "value": "2080.00",
+      "balance_qty": "70.00",
+      "balance_value": "3520.00"
+    },
+    {
+      "date": "2026-10-20",
+      "voucher": "SHPM-1002",
+      "item": "LT-CUP50",
+      "qty": "-24.00",
+      "rate": "15.00",
+      "value": "-360.00",
+      "balance_qty": "56.00",
+      "balance_value": "840.00"
+    },
+    {
+      "date": "2026-10-20",
+      "voucher": "SHPM-1002",
+      "item": "LT-BEAN1KG",
+      "qty": "-32.00",
+      "rate": "48.25",
+      "value": "-1544.00",
+      "balance_qty": "38.00",
+      "balance_value": "1976.00"
+    },
+    {
+      "date": "2026-10-25",
+      "voucher": "SHPM-1003",
+      "item": "LT-GRINDX1",
+      "qty": "1.00",
+      "rate": "420.00",
+      "value": "420.00",
+      "balance_qty": "5.00",
+      "balance_value": "2100.00"
+    },
+    {
+      "date": "2026-10-30",
+      "voucher": "SMOV-1001",
+      "item": "LT-CUP50",
+      "qty": "-2.00",
+      "rate": "15.00",
+      "value": "-30.00",
+      "balance_qty": "54.00",
+      "balance_value": "810.00"
+    },
+    {
+      "date": "2026-10-05",
+      "voucher": "SHPM-1004",
+      "item": "LT-CUP50",
+      "qty": "-3.00",
+      "rate": "15.00",
+      "value": "-45.00",
+      "balance_qty": "51.00",
+      "balance_value": "765.00"
+    }
+  ],
+  "stock_balance": {
+    "as_on": "2026-10-31",
+    "items": [
+      {
+        "item_code": "LT-BEAN1KG",
+        "qty": "38.00",
+        "value": "1976.00",
+        "average_rate": "52.00"
+      },
+      {
+        "item_code": "LT-CUP50",
+        "qty": "51.00",
+        "value": "765.00",
+        "average_rate": "15.00"
+      },
+      {
+        "item_code": "LT-GRINDX1",
+        "qty": "5.00",
+        "value": "2100.00",
+        "average_rate": "420.00"
+      }
+    ],
+    "total_value": "4841.00"
+  },
+  "trial_balance": {
+    "as_on": "2026-10-31",
+    "rows": [
+      {
+        "account": "Capital Stock",
+        "total_debit": "0.00",
+        "total_credit": "20000.00",
+        "closing_debit": "0.00",
+        "closing_credit": "20000.00"
+      },
+      {
+        "account": "Cash",
+        "total_debit": "77.76",
+        "total_credit": "0.00",
+        "closing_debit": "77.76",
+        "closing_credit": "0.00"
+      },
+      {
+        "account": "Cost of Goods Sold",
+        "total_debit": "3149.00",
+        "total_credit": "420.00",
+        "closing_debit": "2729.00",
+        "closing_credit": "0.00"
+      },
+      {
+        "account": "Creditors",
+        "total_debit": "7600.00",
+        "total_credit": "7600.00",
+        "closing_debit": "0.00",
+        "closing_credit": "0.00"
+      },
+      {
+        "account": "Debtors",
+        "total_debit": "5879.52",
+        "total_credit": "5879.52",
+        "closing_debit": "0.00",
+        "closing_credit": "0.00"
+      },
+      {
+        "account": "Maybank Current",
+        "total_debit": "25110.56",
+        "total_credit": "8291.20",
+        "closing_debit": "16819.36",
+        "closing_credit": "0.00"
+      },
+      {
+        "account": "SST Payable",
+        "total_debit": "51.20",
+        "total_credit": "384.32",
+        "closing_debit": "0.00",
+        "closing_credit": "333.12"
+      },
+      {
+        "account": "Sales",
+        "total_debit": "640.00",
+        "total_credit": "4804.00",
+        "closing_debit": "0.00",
+        "closing_credit": "4164.00"
+      },
+      {
+        "account": "Stock Adjustment",
+        "total_debit": "30.00",
+        "total_credit": "0.00",
+        "closing_debit": "30.00",
+        "closing_credit": "0.00"
+      },
+      {
+        "account": "Stock In Hand",
+        "total_debit": "8020.00",
+        "total_credit": "3179.00",
+        "closing_debit": "4841.00",
+        "closing_credit": "0.00"
+      },
+      {
+        "account": "Stock Received But Not Billed",
+        "total_debit": "7600.00",
+        "total_credit": "7600.00",
+        "closing_debit": "0.00",
+        "closing_credit": "0.00"
+      }
+    ],
+    "total_debit": "58158.04",
+    "total_credit": "58158.04",
+    "closing_debit": "24497.12",
+    "closing_credit": "24497.12"
+  },
+  "profit_and_loss": {
+    "from_date": "2026-01-01",
+    "to_date": "2026-10-31",
+    "income": {
+      "Sales": "4164.00"
+    },
+    "income_total": "4164.00",
+    "expenses": {
+      "Cost of Goods Sold": "2729.00",
+      "Stock Adjustment": "30.00"
+    },
+    "expenses_total": "2759.00",
+    "gross_profit": "1435.00",
+    "net_profit": "1405.00"
+  },
+  "balance_sheet": {
+    "as_on": "2026-10-31",
+    "assets": {
+      "Bank Accounts": "16819.36",
+      "Cash": "77.76",
+      "Stock In Hand": "4841.00"
+    },
+    "assets_total": "21738.12",
+    "liabilities": {
+      "SST Payable": "333.12"
+    },
+    "liabilities_total": "333.12",
+    "equity": {
+      "Capital Stock": "20000.00",
+      "Current Year Earnings": "1405.00"
+    },
+    "equity_total": "21405.00",
+    "liabilities_and_equity_total": "21738.12"
+  },
+  "pos_shift": {
+    "opening_amount": "0.00",
+    "sales_cash": "77.76",
+    "expected_closing": "77.76",
+    "denominations": {
+      "50": 1,
+      "20": 1,
+      "5": 1,
+      "2": 1,
+      "0.5": 1,
+      "0.2": 1,
+      "0.05": 1,
+      "0.01": 1
+    },
+    "difference": "0.00"
+  },
+  "checkpoint": {
+    "documents_created": 20,
+    "trial_balance_closing_debit": "24497.12",
+    "trial_balance_closing_credit": "24497.12",
+    "trial_balance_period_debit": "58158.04",
+    "trial_balance_period_credit": "58158.04",
+    "net_profit": "1405.00",
+    "stock_value": "4841.00",
+    "bank_balance": "16819.36",
+    "cash_balance": "77.76",
+    "sst_payable": "333.12",
+    "assets_total": "21738.12",
+    "liabilities_and_equity_total": "21738.12"
+  }
+}
