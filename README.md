@@ -58,6 +58,31 @@ Frappe Books started as a desktop app that keeps one company in one file on one 
 	</tr>
 </table>
 
+### Self-Hosting
+
+Books runs on a Frappe site you control. Two scripts install it end to end: on
+Ubuntu or Debian, and on a Windows laptop through WSL2.
+
+```bash
+./deploy/install-books.sh --port 8000     # Ubuntu, Debian or WSL2
+```
+
+```powershell
+.\deploy\install-books.ps1                # Windows laptop, in an Administrator PowerShell
+```
+
+They install Frappe, Books, MariaDB, Redis, nginx and supervisor, create the
+site, build the assets and add a nightly backup. See
+[deploy/README.md](deploy/README.md) for the options, backups, updates and
+troubleshooting.
+
+### Training
+
+[training/](training/README.md) is an 18-module course for functional and
+technical consultants: a full demo company keyed in end to end, with the exact
+expected output (totals, ledger lines, FIFO valuation, report figures, statuses)
+and machine-readable fixtures in [training/data/](training/data).
+
 ### Under the Hood
 
 - [**Frappe Framework**](https://github.com/frappe/frappe): A full-stack web application framework written in Python and JavaScript. It gives Books its database layer, user authentication, permissions, and a REST API.
